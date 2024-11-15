@@ -38,6 +38,11 @@ for (let i = 0; i < totalNavList; i++) {
 
     });
 }
+const link = document.getElementById("project-link1"); 
+link.addEventListener('click', function() {
+    window.open("https://anilsjr.github.io/recipe-app/", "_blank");
+});
+
 
 function addBackSectionClass(num) 
 {
