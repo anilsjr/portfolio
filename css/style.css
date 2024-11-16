@@ -11,7 +11,6 @@ body {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-
 }
 
 
@@ -582,34 +581,6 @@ select {
     margin: 0;
 }
 
-.about .about-content .skills .skill-item {
-    margin-bottom: 30px;
-}
-
-.about .about-content .skills .skill-item .progress {
-    background-color: #e3e3e3;
-    height: 8px;
-    border-radius: 4px;
-    width: 100%;
-    position: relative;
-}
-
-.about .about-content .skills .skill-item .progress .progress-in {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 4px;
-}
-
-.about .about-content .skills .skill-item .skill-porcent {
-    line-height: 40px;
-    position: absolute;
-    right: 0;
-    top: -40px;
-    font-weight: 400;
-    color: #302e4d;
-}
 
 .about .about-content .education {
     -ms-flex: 0 0 50%;
