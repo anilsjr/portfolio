@@ -64,6 +64,7 @@ select {
     z-index: 1;
 }
 
+
 @keyframes slideSection {
     0% {
         transform: translateX(100%);
@@ -1024,36 +1025,44 @@ body.dark .aside .nav li a.active,
         padding-top: 70px;
     }
 
-    .aside .nav-toggler {
-        display: -ms-flexbox;
-        display: flex;
-        left: 30px;
-    }
-
-    .aside .nav-toggler.open {
-        left: 300px;
-    }
-
-    .aside {
-        left: -270px;
-    }
-
-    .aside.open {
-        left: 0;
-    }
-
     .section {
         left: 0;
-    }
-
-    .section.open {
-        left: 270px;
     }
 
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
     }
+
+    .aside {
+        width: 100%;
+        max-height: 50px !important;
+    }
+
+    .aside .nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .aside .nav li {
+        display: inline-block;
+    }
+    .aside .nav li a{
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .aside-inner{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .aside .logo , .aside .copyright-text, .nav-toggler {
+        display: none;
+    }
+
 }
 
 @media(max-width: 991px) {
@@ -1086,6 +1095,12 @@ body.dark .aside .nav li a.active,
     }
 }
 
+@media(max-width: 680px) {
+    .aside .aside-inner{
+        padding: 0;
+    }
+}
+
 @media(max-width: 575px) {
 
     .portfolio .portfolio-item,
@@ -1093,5 +1108,12 @@ body.dark .aside .nav li a.active,
         flex: 0 0 100%;
         -ms-flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+@media(max-width: 550px) {
+    .aside .nav li a{
+        font-size: 3.3vw;
+        padding: 0;
     }
 }
