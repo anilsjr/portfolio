@@ -99,3 +99,56 @@ function asideSectionTogglerBtn()
         allSection[i].classList.toggle('open');
     }
 }
+
+// Get the dark mode toggle button and icons
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+
+// Check if the dark mode preference is already saved
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
+}
+
+// Toggle dark mode on button click
+darkModeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('dark');
+
+    // Save the preference to localStorage
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+    }
+
+    // Toggle visibility of the icons based on the current mode
+    sunIcon.style.display = document.body.classList.contains('dark') ? 'none' : 'block';
+    moonIcon.style.display = document.body.classList.contains('dark') ? 'block' : 'none';
+});
+
+
+
+
+
+
+
+
+
+
+// Check if the system prefers dark mode
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Set the initial theme based on the user's system preference
+if (prefersDarkScheme) {
+    document.body.classList.add('dark');
+}
+
+// Optional: Detect the toggle button and update user preference
+darkModeToggle.addEventListener('click', function () {
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
