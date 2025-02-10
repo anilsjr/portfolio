@@ -4,91 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
 
-
-
-
-/* Dark Mode Styles */
-body.dark {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Example: Adjust specific elements in dark mode */
-body.dark .aside {
-    background-color: #1e1e1e;
-}
-body.dark .section.active {
-    background-color: #000000;
-}
-
-body.dark .nav li a,
-body.dark .portfolio .portfolio-item-inner,
-body.dark .service .service-item .service-item-inner,
-body.dark .contact .contact-info-item {
-    color: #ffffff;
-}
-
-body.dark .portfolio .portfolio-filter button.active {
-    border-color: #2196f3;
-}
-
-body.dark .portfolio .portfolio-item-inner:hover .portfolio-info {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Dark Mode Button Styles */
-.dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #2196f3;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Change color when dark mode is active */
-body.dark .dark-mode-toggle {
-    background-color: #333;
-}
-
-/* Icon Styles */
-.dark-mode-toggle i {
-    font-size: 20px;
-    display: block;
-}
-#sun-icon,#moon-icon{
-    font-size: 16px;
-}
-/* Hide the icons based on theme */
-body.dark #sun-icon {
-    display: none;
-}
-
-body:not(.dark) #moon-icon {
-    display: none;
-}
-
-.dark-mode-toggle:hover {
-    transform: scale(1.1);
-}
-
-
-
-
-
-
 /* General Style */
 body {
     margin: 0;
@@ -1198,12 +1113,7 @@ body.dark .aside .nav li a.active,
 
 @media(max-width: 550px) {
     .aside .nav li a{
-        font-size: 0;
-        /* padding: 0 10px; */
-        border: none;
-    }
-    .aside .nav li a i{
-        font-size: 18px;
-        padding: 10px 2.55vw;
+        font-size: 3.3vw;
+        padding: 0;
     }
 }
