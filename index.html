@@ -15,22 +15,23 @@
     /* ===== TOKENS ===== */
 /* ===== TOKENS ===== */
 /* ===== TOKENS ===== */
+/* ===== TOKENS ===== */
 :root {
-  --bg:        #040406;
-  --bg-2:      #0a0b10;
-  --bg-3:      #11131a;
-  --border:    #1e212b;
-  --border-2:  #2c3142;
-  --text:      #f5f6f9;
-  --muted:     #7c849b;
-  --muted-2:   #b2b9cc;
-  --accent:    #ccff00; /* Punchier, high-visibility neon volt */
-  --accent-dim: rgba(204, 255, 0, 0.12);
-  --cyan:      #00f0ff; /* Pure electric cyan */
-  --cyan-dim:  rgba(0, 240, 255, 0.1);
-  --purple:    #a855f7;
-  --glow-a:    rgba(204, 255, 0, 0.15);
-  --glow-c:    rgba(0, 240, 255, 0.12);
+  --bg:        #06050a; /* Deep violet-tinted black */
+  --bg-2:      #0d0b14; /* Smooth dark indigo-gray */
+  --bg-3:      #14111f;
+  --border:    #221e33;
+  --border-2:  #332d4d;
+  --text:      #f7f5fa;
+  --muted:     #7f7899;
+  --muted-2:   #b3adcc;
+  --accent:    #a855f7; /* Vibrant royal purple */
+  --accent-dim: rgba(168, 85, 247, 0.12);
+  --cyan:      #ff6b00; /* Cyber punk safety orange/coral contrast */
+  --cyan-dim:  rgba(255, 107, 0, 0.1);
+  --purple:    #6366f1;
+  --glow-a:    rgba(168, 85, 247, 0.15);
+  --glow-c:    rgba(255, 107, 0, 0.12);
   --r:         16px;
   --r-lg:      22px;
   --max:       1160px;
@@ -43,20 +44,20 @@
 
 /* ===== LIGHT MODE TOKENS ===== */
 html.light {
-  --bg:        #fafbfc; /* Crisp, ultra-clean tech white */
-  --bg-2:      #f1f3f7; /* Soft slate gray */
-  --bg-3:      #e5e8f0;
-  --border:    #d8dce6;
-  --border-2:  #b0b8c9;
-  --text:      #090b11; /* Rich off-black for premium contrast */
-  --muted:     #636c83;
-  --muted-2:   #3a4155;
-  --accent:    #3fa300; /* Darkened electric green for readable text/accents */
-  --accent-dim: rgba(63, 163, 0, 0.08);
-  --cyan:      #008494; /* Saturated deep cyan for accessibility */
-  --cyan-dim:  rgba(0, 132, 148, 0.08);
-  --glow-a:    rgba(63, 163, 0, 0.12);
-  --glow-c:    rgba(0, 132, 148, 0.1);
+  --bg:        #faf9fc; /* Soft white with a hint of purple warmth */
+  --bg-2:      #f1eff5; 
+  --bg-3:      #e4e1eb;
+  --border:    #d5d0e0;
+  --border-2:  #aba3bf;
+  --text:      #0e0a1a; /* Deep deep indigo-black */
+  --muted:     #66607c;
+  --muted-2:   #3c374d;
+  --accent:    #8b2cf5; /* Saturated purple that pops safely on white */
+  --accent-dim: rgba(139, 44, 245, 0.08);
+  --cyan:      #d64f00; /* Deep rust orange for readability */
+  --cyan-dim:  rgba(214, 79, 0, 0.08);
+  --glow-a:    rgba(139, 44, 245, 0.12);
+  --glow-c:    rgba(214, 79, 0, 0.1);
 }
 
 html.light body {
@@ -64,46 +65,46 @@ html.light body {
 }
 html.light body::before {
   background:
-    radial-gradient(ellipse 60% 50% at 10% 15%, rgba(63, 163, 0, 0.05) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(0, 132, 148, 0.04) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 60% at 50% 110%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 50% at 10% 15%, rgba(139, 44, 245, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(214, 79, 0, 0.03) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 60% at 50% 110%, rgba(99, 102, 241, 0.03) 0%, transparent 50%);
 }
-html.light body::after { opacity: .04; }
+html.light body::after { opacity: .03; }
 html.light nav {
-  background: rgba(250, 251, 252, 0.85);
+  background: rgba(250, 249, 252, 0.85);
 }
 html.light .mobile-menu {
-  background: rgba(250, 251, 252, 0.98);
+  background: rgba(250, 249, 252, 0.98);
 }
 html.light h1 .outline {
-  -webkit-text-stroke: 1.5px rgba(9, 11, 17, 0.2);
+  -webkit-text-stroke: 1.5px rgba(14, 10, 26, 0.2);
 }
 html.light h2 em {
-  -webkit-text-stroke: 1px rgba(9, 11, 17, 0.2);
+  -webkit-text-stroke: 1px rgba(14, 10, 26, 0.2);
 }
 html.light .stat-card::before {
-  background: linear-gradient(90deg, transparent, rgba(63, 163, 0, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(139, 44, 245, 0.2), transparent);
 }
 html.light .card::before {
-  background: linear-gradient(135deg, rgba(63, 163, 0, 0.04), transparent 50%);
+  background: linear-gradient(135deg, rgba(139, 44, 245, 0.04), transparent 50%);
 }
 html.light .btn.primary {
-  background: linear-gradient(135deg, #46b500, #338500);
+  background: linear-gradient(135deg, #9d4bf6, #761ee0);
   color: #fff;
 }
 html.light .eyebrow {
-  border-color: rgba(63, 163, 0, 0.2);
-  background: rgba(63, 163, 0, 0.05);
+  border-color: rgba(139, 44, 245, 0.2);
+  background: rgba(139, 44, 245, 0.05);
 }
 html.light .eyebrow-dot {
   box-shadow: 0 0 10px var(--accent);
 }
 html.light .pill {
-  border-color: rgba(63, 163, 0, 0.15);
-  background: rgba(63, 163, 0, 0.04);
+  border-color: rgba(139, 44, 245, 0.15);
+  background: rgba(139, 44, 245, 0.04);
 }
 html.light .project-card::after {
-  background: linear-gradient(90deg, #46b500, #008494);
+  background: linear-gradient(90deg, #8b2cf5, #d64f00);
 }
 html.light .timeline::before {
   background: linear-gradient(to bottom, var(--accent), transparent);
@@ -113,6 +114,7 @@ html.light .tl-item::before {
   box-shadow: 0 0 12px var(--accent);
 }
 html.light ul.bullets li::before { color: var(--accent); }
+    
     /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
