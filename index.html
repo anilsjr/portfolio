@@ -13,104 +13,105 @@
 
   <style>
     /* ===== TOKENS ===== */
-    :root {
-      --bg:       #060609;
-      --bg-2:     #0c0c12;
-      --bg-3:     #111118;
-      --border:   #1e1e2a;
-      --border-2: #2a2a38;
-      --text:     #f0f0f5;
-      --muted:    #8888a8;
-      --muted-2:  #b8b8cc;
-      --accent:   #b8ff4a;
-      --accent-dim: rgba(184,255,74,.12);
-      --cyan:     #4af0ff;
-      --cyan-dim: rgba(74,240,255,.1);
-      --purple:   #a855f7;
-      --glow-a:   rgba(184,255,74,.15);
-      --glow-c:   rgba(74,240,255,.12);
-      --r:        16px;
-      --r-lg:     22px;
-      --max:      1160px;
-      --nav-h:    68px;
+/* ===== TOKENS ===== */
+:root {
+  --bg:        #040406;
+  --bg-2:      #0a0b10;
+  --bg-3:      #11131a;
+  --border:    #1e212b;
+  --border-2:  #2c3142;
+  --text:      #f5f6f9;
+  --muted:     #7c849b;
+  --muted-2:   #b2b9cc;
+  --accent:    #ccff00; /* Punchier, high-visibility neon volt */
+  --accent-dim: rgba(204, 255, 0, 0.12);
+  --cyan:      #00f0ff; /* Pure electric cyan */
+  --cyan-dim:  rgba(0, 240, 255, 0.1);
+  --purple:    #a855f7;
+  --glow-a:    rgba(204, 255, 0, 0.15);
+  --glow-c:    rgba(0, 240, 255, 0.12);
+  --r:         16px;
+  --r-lg:      22px;
+  --max:       1160px;
+  --nav-h:     68px;
 
-      --font-display: 'Clash Display', 'Cabinet Grotesk', sans-serif;
-      --font-body:    'Cabinet Grotesk', system-ui, sans-serif;
-      --font-mono:    'JetBrains Mono', monospace;
-    }
+  --font-display: 'Clash Display', 'Cabinet Grotesk', sans-serif;
+  --font-body:    'Cabinet Grotesk', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
 
-    /* ===== LIGHT MODE TOKENS ===== */
-    html.light {
-      --bg:         #f4f4f0;
-      --bg-2:       #ebebe6;
-      --bg-3:       #e2e2dd;
-      --border:     #d4d4cc;
-      --border-2:   #c0c0b8;
-      --text:       #18181a;
-      --muted:      #72726e;
-      --muted-2:    #48484a;
-      --accent:     #4f9900;
-      --accent-dim: rgba(79,153,0,.1);
-      --cyan:       #007a8a;
-      --cyan-dim:   rgba(0,122,138,.08);
-      --glow-a:     rgba(79,153,0,.12);
-      --glow-c:     rgba(0,122,138,.1);
-    }
-    html.light body {
-      background-color: var(--bg);
-    }
-    html.light body::before {
-      background:
-        radial-gradient(ellipse 60% 50% at 10% 15%, rgba(79,153,0,.06) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 90% 10%, rgba(0,122,138,.05) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 60% at 50% 110%, rgba(100,80,200,.04) 0%, transparent 50%);
-    }
-    html.light body::after { opacity: .06; }
-    html.light nav {
-      background: rgba(244,244,240,.88);
-    }
-    html.light .mobile-menu {
-      background: rgba(244,244,240,.98);
-    }
-    html.light h1 .outline {
-      -webkit-text-stroke: 1.5px rgba(24,24,26,.22);
-    }
-    html.light h2 em {
-      -webkit-text-stroke: 1px rgba(24,24,26,.22);
-    }
-    html.light .stat-card::before {
-      background: linear-gradient(90deg, transparent, rgba(79,153,0,.2), transparent);
-    }
-    html.light .card::before {
-      background: linear-gradient(135deg, rgba(79,153,0,.03), transparent 50%);
-    }
-    html.light .btn.primary {
-      background: linear-gradient(135deg, #5ab300, #3d8a00);
-      color: #fff;
-    }
-    html.light .eyebrow {
-      border-color: rgba(79,153,0,.22);
-      background: rgba(79,153,0,.06);
-    }
-    html.light .eyebrow-dot {
-      box-shadow: 0 0 10px var(--accent);
-    }
-    html.light .pill {
-      border-color: rgba(79,153,0,.18);
-      background: rgba(79,153,0,.05);
-    }
-    html.light .project-card::after {
-      background: linear-gradient(90deg, #5ab300, #007a8a);
-    }
-    html.light .timeline::before {
-      background: linear-gradient(to bottom, var(--accent), transparent);
-    }
-    html.light .tl-item::before {
-      background: var(--accent);
-      box-shadow: 0 0 12px var(--accent);
-    }
-    html.light ul.bullets li::before { color: var(--accent); }
+/* ===== LIGHT MODE TOKENS ===== */
+html.light {
+  --bg:        #fafbfc; /* Crisp, ultra-clean tech white */
+  --bg-2:      #f1f3f7; /* Soft slate gray */
+  --bg-3:      #e5e8f0;
+  --border:    #d8dce6;
+  --border-2:  #b0b8c9;
+  --text:      #090b11; /* Rich off-black for premium contrast */
+  --muted:     #636c83;
+  --muted-2:   #3a4155;
+  --accent:    #3fa300; /* Darkened electric green for readable text/accents */
+  --accent-dim: rgba(63, 163, 0, 0.08);
+  --cyan:      #008494; /* Saturated deep cyan for accessibility */
+  --cyan-dim:  rgba(0, 132, 148, 0.08);
+  --glow-a:    rgba(63, 163, 0, 0.12);
+  --glow-c:    rgba(0, 132, 148, 0.1);
+}
 
+html.light body {
+  background-color: var(--bg);
+}
+html.light body::before {
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 15%, rgba(63, 163, 0, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(0, 132, 148, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 60% at 50% 110%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
+}
+html.light body::after { opacity: .04; }
+html.light nav {
+  background: rgba(250, 251, 252, 0.85);
+}
+html.light .mobile-menu {
+  background: rgba(250, 251, 252, 0.98);
+}
+html.light h1 .outline {
+  -webkit-text-stroke: 1.5px rgba(9, 11, 17, 0.2);
+}
+html.light h2 em {
+  -webkit-text-stroke: 1px rgba(9, 11, 17, 0.2);
+}
+html.light .stat-card::before {
+  background: linear-gradient(90deg, transparent, rgba(63, 163, 0, 0.2), transparent);
+}
+html.light .card::before {
+  background: linear-gradient(135deg, rgba(63, 163, 0, 0.04), transparent 50%);
+}
+html.light .btn.primary {
+  background: linear-gradient(135deg, #46b500, #338500);
+  color: #fff;
+}
+html.light .eyebrow {
+  border-color: rgba(63, 163, 0, 0.2);
+  background: rgba(63, 163, 0, 0.05);
+}
+html.light .eyebrow-dot {
+  box-shadow: 0 0 10px var(--accent);
+}
+html.light .pill {
+  border-color: rgba(63, 163, 0, 0.15);
+  background: rgba(63, 163, 0, 0.04);
+}
+html.light .project-card::after {
+  background: linear-gradient(90deg, #46b500, #008494);
+}
+html.light .timeline::before {
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+html.light .tl-item::before {
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+html.light ul.bullets li::before { color: var(--accent); }
     /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
